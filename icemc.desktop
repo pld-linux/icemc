@@ -5,7 +5,7 @@ Comment=Graphical menu-editor for IceWM
 Comment[pl]=Graficzny edytor menu dla IceWM
 Icon=icemc.png
 Exec=icemc
-Terminal=0
+Terminal=false
 Type=Application
 
 # vi: encoding=utf-8
