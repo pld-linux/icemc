@@ -2,7 +2,7 @@ Summary:	Graphical menu configuration utility for IceWM
 Summary(pl):	Graficzne narzêdzie do edycji menu dla IceWM-a
 Name:		icemc
 Version:	0.2.2
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		X11/Window Managers/Tools
 Source0:	http://www.algorithm.at/comp/icemc/%{name}-%{version}.tar.gz
@@ -16,6 +16,7 @@ Patch1:		http://www.algorithm.at/comp/icemc/%{name}-%{version}.patch.tar.gz
 BuildRequires:	qt-devel >= 3.0.5
 Requires:	icewm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Obsoletes:	iceMC
 
 %define         _prefix         /usr/X11R6/
 
