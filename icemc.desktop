@@ -3,10 +3,10 @@ Encoding=UTF-8
 Name=IceMC
 Name[pl]=IceMC
 Comment=Graphical menu-editor for IceWM
-Comment[pl]=Graficzny edytor menu dla IceWM
+Comment[pl]=Graficzny edytor menu dla IceWM-a
 Icon=icemc.png
 Exec=icemc
 Terminal=false
 Type=Application
-
+Categories=Settings;
 # vi: encoding=utf-8
