@@ -2,7 +2,7 @@ Summary:	Graphical menu configuration utility for IceWM
 Summary(pl):	Graficzne narzêdzie do edycji menu dla IceWM-a
 Name:		icemc
 Version:	0.2.2
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Window Managers/Tools
 Source0:	http://www.algorithm.at/comp/icemc/%{name}-%{version}.tar.gz
@@ -10,10 +10,10 @@ Source1:	%{name}.desktop
 Source2:	%{name}.png
 Source3:	%{name}_16x16.xpm
 Source4:	%{name}_32x32.xpm
+URL:		http://www.algorithm.at/comp/icemc/icemc.html
 Patch0:		%{name}-Makefile.patch
 Patch1:		http://www.algorithm.at/comp/icemc/%{name}-%{version}.patch.tar.gz
-URL:		http://www.algorithm.at/comp/icemc/icemc.html
-BuildRequires:	qt-devel
+BuildRequires:	qt-devel >= 3.0.5
 Requires:	icewm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -44,14 +44,12 @@ install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/IceWM
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE3} %{SOURCE4} $RPM_BUILD_ROOT%{_libdir}/X11/icewm/icons
 
-gzip -9nf CHANGELOG.txt README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc CHANGELOG.txt README
 %attr(755,root,root) %{_bindir}/*
 %{_applnkdir}/Settings/IceWM/*
 %{_libdir}/X11/icewm/icons/*
