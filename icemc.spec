@@ -6,6 +6,7 @@ Release:	3
 License:	GPL v2
 Group:		X11/Window Managers/Tools
 Source0:	http://www.algorithm.at/comp/icemc/%{name}-%{version}.tar.gz
+# Source0-md5:	6ba3d647139f7574fa83aaa1b36b5e56
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Source3:	%{name}_16x16.xpm
