@@ -18,7 +18,6 @@ Requires:	icewm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	iceMC
 
-%define         _prefix         /usr/X11R6/
 
 %description
 Graphical menu edition utility for IceWM. It uses qt-library.
