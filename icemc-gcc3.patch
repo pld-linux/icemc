@@ -1,0 +1,11 @@
+--- icemc-0.2.4/IceMainWidget.cpp.orig	Thu Feb 27 20:10:23 2003
++++ icemc-0.2.4/IceMainWidget.cpp	Wed Mar 31 11:24:22 2004
+@@ -331,7 +331,7 @@
+     ;//qDebug("DEBUG: updateInfoStr: " + selected + " " + info + " " + item->text(0));
+     info = item->getInfo();
+ #ifdef DEBUG
+-    cout << "updateInfoStr: info=" << info << "; selected=" << selected << endl;
++    std::cout << "updateInfoStr: info=" << info << "; selected=" << selected << std::endl;
+ #endif
+     if (info != selected) {
+       if (info == "menu") {
