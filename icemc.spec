@@ -11,9 +11,10 @@ Source1:	%{name}.desktop
 Source2:	%{name}.png
 Source3:	%{name}_16x16.xpm
 Source4:	%{name}_32x32.xpm
-URL:		http://www.algorithm.at/comp/icemc/icemc.html
+Source5:	http://www.algorithm.at/comp/icemc/%{name}-%{version}.patch.tar.gz
+# Source5-md5:	ff938b1156a11960ccceb73d49f10a04
 Patch0:		%{name}-Makefile.patch
-Patch1:		http://www.algorithm.at/comp/icemc/%{name}-%{version}.patch.tar.gz
+URL:		http://www.algorithm.at/comp/icemc/icemc.html
 BuildRequires:	qt-devel >= 3.0.5
 Requires:	icewm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -29,7 +30,7 @@ Graficzne narzêdzie do edycji menu w IceWM. U¿ywa biblioteki qt.
 %prep
 %setup -q 
 %patch0 -p1
-tar zxf %{PATCH1}; patch -p1 <%{name}-%{version}.patch/patch.%{name}-%{version}
+tar zxf %{SOURCE5}; patch -p1 <%{name}-%{version}.patch/patch.%{name}-%{version}
 
 %build
 %{__make} CXXFLAGS="%{rpmcflags} -fno-exceptions"
