@@ -11,6 +11,7 @@ Source1:	%{name}.desktop
 Source2:	%{name}.png
 Source3:	%{name}_16x16.xpm
 Source4:	%{name}_32x32.xpm
+Patch0:		%{name}-gcc3.patch
 URL:		http://www.algorithm.at/comp/icemc/icemc.html
 BuildRequires:	qt-devel >= 3.0.5
 Requires:	icewm
@@ -25,15 +26,18 @@ Graficzne narzêdzie do edycji menu w IceWM. U¿ywa biblioteki Qt.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make} \
-	CXXFLAGS="%{rpmcflags} -fno-exceptions -I/usr/include/qt" \
-	QTDIR="/usr"
+	CXX="%{__cxx}" \
+	CXXFLAGS="%{rpmcflags} -fno-exceptions -I/usr/include/qt %{!?debug:-DNO_DEBUG}" \
+	QTDIR="/usr" \
+	LIBS="-lqt-mt"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Settings/IceWM} \
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir}} \
 	$RPM_BUILD_ROOT{%{_datadir}/icewm/icons,%{_pixmapsdir}}
 
 install icemc $RPM_BUILD_ROOT%{_bindir}
