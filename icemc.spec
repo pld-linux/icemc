@@ -24,7 +24,7 @@ Graphical menu edition utility for IceWM. It uses qt-library.
 Graficzne narzêdzie do edycji menu w IceWM. U¿ywa biblioteki qt.
 
 %prep
-%setup -q 
+%setup -q
 
 %build
 %{__make} \
