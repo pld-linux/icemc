@@ -18,29 +18,29 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	iceMC
 
 %description
-Graphical menu edition utility for IceWM. It uses qt-library.
+Graphical menu edition utility for IceWM. It uses Qt-library.
 
 %description -l pl
-Graficzne narzêdzie do edycji menu w IceWM. U¿ywa biblioteki qt.
+Graficzne narzêdzie do edycji menu w IceWM. U¿ywa biblioteki Qt.
 
 %prep
 %setup -q
 
 %build
 %{__make} \
-	CXXFLAGS="%{rpmcflags} -fno-exceptions -I/usr/X11R6/include/qt" \
+	CXXFLAGS="%{rpmcflags} -fno-exceptions -I/usr/include/qt" \
 	QTDIR="/usr"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Settings/IceWM} \
-	$RPM_BUILD_ROOT{%{_libdir}/X11/icewm/icons,%{_pixmapsdir}}
+	$RPM_BUILD_ROOT{%{_datadir}/icewm/icons,%{_pixmapsdir}}
 
 install icemc $RPM_BUILD_ROOT%{_bindir}
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/IceWM
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
-install %{SOURCE3} %{SOURCE4} $RPM_BUILD_ROOT%{_libdir}/X11/icewm/icons
+install %{SOURCE3} %{SOURCE4} $RPM_BUILD_ROOT%{_datadir}/icewm/icons
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -49,6 +49,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGELOG.txt README
 %attr(755,root,root) %{_bindir}/*
-%{_applnkdir}/Settings/IceWM/*
-%{_libdir}/X11/icewm/icons/*
+%{_datadir}/icewm/icons/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
