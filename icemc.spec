@@ -1,5 +1,5 @@
-Summary:	Graphical menu configuration utility for icewm
-Summary(pl):	Graficzne narzêdzie do edycji menu dla icewm'a
+Summary:	Graphical menu configuration utility for IceWM
+Summary(pl):	Graficzne narzêdzie do edycji menu dla IceWM-a
 Name:		icemc
 Version:	0.2.2
 Release:	1
@@ -20,11 +20,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define         _prefix         /usr/X11R6/
 
 %description
-Graphical menu edition utility for icewm. It uses qt-library.
+Graphical menu edition utility for IceWM. It uses qt-library.
 
 %description -l pl
-Graficzne narzêdzie do edycji menu w icewm. Wymaga bybliotek qt w
-systemie.
+Graficzne narzêdzie do edycji menu w IceWM. U¿ywa biblioteki qt.
 
 %prep
 %setup -q 
