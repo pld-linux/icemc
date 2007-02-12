@@ -1,5 +1,5 @@
 Summary:	Graphical menu configuration utility for IceWM
-Summary(pl):	Graficzne narzêdzie do edycji menu dla IceWM-a
+Summary(pl.UTF-8):   Graficzne narzÄ™dzie do edycji menu dla IceWM-a
 Name:		icemc
 Version:	0.2.4
 Release:	1
@@ -21,8 +21,8 @@ Obsoletes:	iceMC
 %description
 Graphical menu edition utility for IceWM. It uses Qt-library.
 
-%description -l pl
-Graficzne narzêdzie do edycji menu w IceWM. U¿ywa biblioteki Qt.
+%description -l pl.UTF-8
+Graficzne narzÄ™dzie do edycji menu w IceWM. UÅ¼ywa biblioteki Qt.
 
 %prep
 %setup -q
