@@ -1,5 +1,5 @@
 Summary:	Graphical menu configuration utility for IceWM
-Summary(pl.UTF-8):   Graficzne narzędzie do edycji menu dla IceWM-a
+Summary(pl.UTF-8):	Graficzne narzędzie do edycji menu dla IceWM-a
 Name:		icemc
 Version:	0.2.4
 Release:	1
