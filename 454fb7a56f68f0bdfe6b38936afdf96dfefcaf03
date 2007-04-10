@@ -1,0 +1,5 @@
+- removed "Requires: qt" (it is generated automaticaly),
+- added full Source url,
+- added using $RPM_OPT_FLAGS and added better C++ optimization
+  (use -fno-exceptions).
+NOTE: it will be good add icon and desktop file for iceMC.
