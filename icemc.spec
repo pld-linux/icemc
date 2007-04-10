@@ -13,7 +13,7 @@ Source3:	%{name}_16x16.xpm
 Source4:	%{name}_32x32.xpm
 Patch0:		%{name}-gcc3.patch
 URL:		http://www.algorithm.at/comp/icemc/icemc.html
-BuildRequires:	qt-devel >= 3.0.5
+BuildRequires:	qt-devel >= 3:3.0.5
 Requires:	icewm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	iceMC
