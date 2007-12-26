@@ -1,10 +1,9 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=IceMC
 Name[pl]=IceMC
 Comment=Graphical menu-editor for IceWM
 Comment[pl]=Graficzny edytor menu dla IceWM-a
-Icon=icemc.png
+Icon=icemc
 Exec=icemc
 Terminal=false
 Type=Application
